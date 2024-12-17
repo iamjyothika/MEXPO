@@ -71,9 +71,9 @@ Version: 1.0.0
 ==================================*/
 /*------------------- 1.1. Variable-------------------*/
 :root {
-  --theme-color: #bdd239;
+  --theme-color: orange;
   --theme-color2: #012313;
-  --theme-color3: #7a9a00;
+  --theme-color3: orange;
   --text-color: #ededed;
   --white-color: #fff;
   --title-color: #000;
