@@ -1578,7 +1578,7 @@ body {
   position: relative;
   margin-top: 43px;
 }
-.sub-title.two::before {
+/* .sub-title.two::before {
   content: "";
   position: absolute;
   top: -45px;
@@ -1587,7 +1587,7 @@ body {
   width: 20px;
   height: 20px;
   background-image: url(../img/breadcurmb/star.png);
-}
+} */
 
 /* Extra small devices */
 @media (max-width: 576px) {
@@ -6499,10 +6499,10 @@ ul {
   background-color: var(--theme-color);
 }
 .ser-icon4 img {
-  filter: brightness(0) invert(1);
+  
   display: inline-flex;
 }
-.ser-icon4::before {
+/* .ser-icon4::before {
   content: "";
   position: absolute;
   top: 0;
@@ -6510,7 +6510,7 @@ ul {
   width: 20px;
   height: 20px;
   background-image: url(../img/breadcurmb/star.png);
-}
+} */
 
 .ser-box4:hover .ser-icon4 {
   background-color: var(--theme-color2);
@@ -9201,6 +9201,15 @@ ul {
 }
 .brand-box img {
   transition: all 0.3s ease;
+  text-align: center;
+  padding: 30px;
+  
+}
+.vs-carousel {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
 
 .brand-style2 {
