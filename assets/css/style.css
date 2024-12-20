@@ -31,6 +31,7 @@ Version: 1.0.0
     3.6. Font
     3.7. Background
     3.8. Text Color
+
     3.9. Overlay
     3.10. Animation
     3.11. Flaticon
@@ -2783,7 +2784,7 @@ html {
 }
 
 .header-main {
-  background-color: var(--theme-color2);
+  background-color: solid #484848;
   border-bottom: 1px solid #484848;
   padding: 10px 0;
 }
@@ -2861,6 +2862,148 @@ html {
     display: inline-block !important;
   }
 }
+
+.about-us-section {
+  background-color: #fff; /* White background */
+}
+
+.image-wrapper {
+  position: relative;
+  text-align:center;
+  width: 100%;
+  padding:10px;
+  max-width: 100%;
+}
+
+.resized-image {
+  display: block; /* Ensures image behaves as a block element */
+  width: 80%; /* Resize to 80% of its parent container */
+  height: auto; /* Maintain aspect ratio */
+  margin:0 auto; /* Centers the image horizontally */
+  border-radius: 10px; /* Adds slight rounding for a modern look */
+}
+.img-fluid {
+  border-radius: 0; /* Removes rounded corners */
+  max-width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover; 
+}
+.text-wrapper p {
+  font-size: 16px; /* Ensures readability */
+  line-height: 1.8; /* Improves spacing between lines */
+  color: #333; /* Neutral text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resized-image {
+      width: 90%; /* Increase size slightly for small devices */
+  }
+
+  .text-wrapper p {
+      font-size: 14px; /* Slightly smaller font for smaller screens */
+  }
+}
+.below-image-text {
+  margin-top: 15px; /* Spacing above the text div */
+  background-color:orange; /* Light gray background */
+  padding: 15px 20px; /* Add padding around the text */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width:fit-content; /* Subtle shadow for depth */
+}
+
+.below-image-text .text-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: rebeccapurple; /* Dark gray for title text */
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.below-image-text .text-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: orange /* Medium gray for description text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .resized-image {
+      width: 90%; /* Adjust image width for smaller screens */
+  }
+}
+
+  .below-image-text .text-title {
+      font-size: 30px;
+      color: orchid;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Slightly smaller text for title */
+  }
+
+ 
+
+
+
+
+
+
+ 
+
+   /* Prevent distortion */
+
+
+
+
+
+@media (max-width: 768px) {
+  .image-wrapper.right-align {
+      position: relative; /* Moves it back to flow on small screens */
+      padding-left: 60px;
+      margin-right: -60%;  /* Adjust margin for mobile */
+  }
+}
+
+.yellow-banner {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffc107; /* Yellow banner */
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners for the banner */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for the banner */
+}
+
+.yellow-banner h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000; /* Black text */
+  margin: 0;
+}
+
+.text-wrapper p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333; /* Dark gray text */
+}
+
+.text-wrapper p.lead {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000; /* Black for emphasis */
+}
+
+@media (max-width: 768px) {
+  .yellow-banner {
+      bottom: 10px;
+      left: 10px;
+  }
+
+  .text-wrapper p {
+      font-size: 14px;
+  }
+}
+
 
 .vs-menu-toggle.v2 {
   background-color: unset;
@@ -2940,6 +3083,64 @@ html {
   /* Medium Large devices */
   /* Large devices */
 }
+.custom-logo {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff; /* White text */
+  text-transform: uppercase;
+}
+
+.text-mex {
+  display: flex;
+  align-items: center;
+  font-size: 5rem;
+  position: relative;
+  line-height: 1;
+}
+
+.letter-m {
+  font-size: 5rem;
+  margin-right: 0.2rem;
+}
+
+.letter-e {
+  font-size: 5rem;
+  margin-right: 0.2rem;
+}
+
+.letter-x {
+  font-size: 5rem;
+  position: relative;
+  margin-left: -0.2rem;
+}
+
+.drill-icon {
+  width: 12px;
+  height: 50px;
+  background: url('path-to-drill-icon.svg') no-repeat center center;
+  background-size: contain;
+  margin-right: 0.2rem;
+  display: inline-block;
+}
+
+.wrench-icon {
+  width: 20px;
+  height: 50px;
+  background: url('path-to-wrench-icon.svg') no-repeat center center;
+  background-size: contain;
+  margin-left: -0.5rem;
+  display: inline-block;
+}
+
+.group-text {
+  font-size: 1.5rem;
+  margin-top: -0.8rem;
+  letter-spacing: 0.2rem;
+}
+
 @media (max-width: 1399px) {
   .menu-style2 {
     margin-left: 6px;
