@@ -2828,6 +2828,64 @@ html {
 .search-icon:hover {
   color: var(--theme-color);
 }
+.core-competencies-section {
+  position: relative;
+  position: relative;
+  margin: 20px 0; /* Adds spacing around the section */
+  padding: 0; /* Removes extra padding */
+  width: 100%; /
+ 
+}
+
+.left-aligned-div {
+  position: relative; /* Positions it in the normal document flow */
+  margin-top: 20px; /* Adds spacing below the previous section */
+  margin-left: 10px; /* Aligns the div close to the left margin */
+  padding: 15px 20px; /* Adds spacing inside the div */
+  background-color: #082a4d; /* Light gray background */
+  border-radius: 5px; /* Smooth rounded corners */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 300px; /* Limits the width of the div */
+  width: auto; /* Ensures the div adjusts to its content */
+}
+
+
+/* Styling the Text Inside the Div */
+.core-title {
+  font-size: 30px; /* Font size for the title */
+  font-weight: bold; /* Bold text */
+  color:white; /* Text color */
+  margin: 0; /* Removes default margins */
+  text-align: left; /* Aligns the text to the left */
+  font-family:Verdana, Geneva, Tahoma, sans-serif; /* Modern font */
+}
+.core-content {
+  margin-top: 10px; /* Space between title and content */
+}
+
+.core-content p {
+  font-size: 25px;
+  line-height: 1.6;
+  color: #333; /* Dark gray for readability */
+  margin-bottom: 10px;
+}
+
+.core-content ul {
+  list-style: disc; /* Bullet points */
+  margin-left: 20px; /* Indent list */
+  color: black; /* Medium gray for list items */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.core-content ul li {
+  margin-bottom: 5px; 
+  /* Space between list items */
+}
+.row {
+  margin: 0; /* Remove row margin */
+  padding: 0; /* Remove row padding */
+}
 
 .connect-btn {
   color: var(--white-color);
@@ -2904,13 +2962,19 @@ html {
       font-size: 14px; /* Slightly smaller font for smaller screens */
   }
 }
+.text-wrapper {
+  width: 100%; /* Match the image width */
+  margin-bottom: 160px; /* Add spacing above the text */
+  padding: 15px; /* Add padding for readability */
+}
 .below-image-text {
   margin-top: 15px; /* Spacing above the text div */
   background-color:orange; /* Light gray background */
   padding: 15px 20px; /* Add padding around the text */
   border-radius: 8px; /* Rounded corners for aesthetics */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width:fit-content; /* Subtle shadow for depth */
+  width: calc(88% + 20px); /* Extends the width by 50px */
+  margin-right: -50px; 
 }
 
 .below-image-text .text-title {
@@ -2926,12 +2990,35 @@ html {
   line-height: 1.6;
   color: orange /* Medium gray for description text */
 }
+.left-aligned-div {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 0; /* Align to the left end of the page */
+  padding: 15px 20px;
+  background-color: #082a4d; /* Light background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 600px; /* Restrict the length */
+  border-left: 0; /* No left border */
+  border-radius: 0 5px 5px 0; /* Round the right corners */
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .resized-image {
       width: 90%; /* Adjust image width for smaller screens */
   }
+  .core-competencies-section {
+    padding: 15px; /* Reduce padding for smaller devices */
+}
+
+.core-title {
+    font-size: 20px; /* Slightly smaller title font */
+}
+
+.core-content p,
+.core-content ul {
+    font-size: 14px; /* Adjust font size for readability */
+}
 }
 
   .below-image-text .text-title {
