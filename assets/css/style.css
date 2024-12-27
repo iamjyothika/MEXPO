@@ -455,6 +455,80 @@ h6 {
   margin: 0 auto;
   padding: 0 15px;
 }
+/* Wrapper for Core Content */
+
+/* Wrapper for Core Content */
+.flex-container {
+  display: flex; /* Align items side by side */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: space-between;
+  align-items:flex-start; /* Space between sections */
+  gap: 20px; /* Add space between sections */
+  max-width: 1200px; /* Limit the width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 10px; /* Add padding around the content */
+}
+
+
+.core-content-wrapper {
+  max-width: 50%; /* Limit to half the width of the webpage */
+  /* Center align horizontally */
+  
+  padding: 20px; /* Add padding inside the wrapper */
+  background-color: #f9f9f9; /* Optional: Light background for readability */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+  text-align: left; /* Ensure text aligns to the left */
+  overflow: hidden; /* Prevent any overflowing elements */
+  display: block; /* Ensure it's treated as a block element */
+}
+
+/* Core Content Text Styling */
+.core-content {
+  font-size: 16px;
+  line-height: 1.8; /* Improved readability */
+  color: #333; /* Dark text for readability */
+  max-width: 100%; /* Ensure content respects the parent's width */
+}
+
+.core-content strong {
+  font-size: 18px;
+  color: #222;
+  font-size:25px; /* Slightly darker color for headings */
+}
+
+.core-content ul {
+  margin-left: 20px; /* Indent list items */
+  list-style-type: disc; /* Standard bullet points */
+  padding-left: 20px; /* Ensure bullets stay inside the container */
+  max-width: 100%; /* Restrict list to fit within the parent container */
+}
+
+.core-content ul li {
+  margin-bottom: 10px; /* Space between list items */
+  word-wrap: break-word; /* Ensure long words break to fit the container */
+  max-width: 100%; /* Restrict each list item to fit the parent container */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .core-content-wrapper {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-left: auto;
+    margin-right: auto; /* Keep content centered */
+  }
+
+  .core-content {
+    font-size: 14px; /* Smaller font size for mobile */
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+}
+
+
+
+
+
+
 
 /*------------------- 2.2. Grid -------------------*/
 .slick-track > [class*=col] {
@@ -2852,12 +2926,13 @@ html {
 
 /* Styling the Text Inside the Div */
 .core-title {
-  font-size: 30px; /* Font size for the title */
+  font-size: 35px; /* Font size for the title */
   font-weight: bold; /* Bold text */
   color:white; /* Text color */
   margin: 0; /* Removes default margins */
   text-align: left; /* Aligns the text to the left */
-  font-family:Verdana, Geneva, Tahoma, sans-serif; /* Modern font */
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  /* Modern font */
 }
 .core-content {
   margin-top: 10px; /* Space between title and content */
@@ -2932,6 +3007,33 @@ html {
   padding:10px;
   max-width: 100%;
 }
+/* Image Section */
+.image-section {
+  margin-top: 20px; /* Space above the section */
+  text-align: center; /* Center-align the section */
+  padding: 10px; /* Add some padding */
+}
+
+
+
+/* Text Overlay */
+.text-overlay {
+  position: absolute; /* Overlay text on the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Perfect centering */
+  color: white; /* White text for contrast */
+  text-align: center; /* Center-align the text */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Add padding for readability */
+  border-radius: 8px; /* Optional rounded corners */
+  font-size: 18px; /* Text size */
+  line-height: 1.5; /* Spacing between lines */
+}
+
+/* Responsive Design */
+
+
 
 .resized-image {
   display: block; /* Ensures image behaves as a block element */
@@ -2997,9 +3099,9 @@ html {
   padding: 15px 20px;
   background-color: #082a4d; /* Light background */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  max-width: 600px; /* Restrict the length */
+  max-width:750px; /* Restrict the length */
   border-left: 0; /* No left border */
-  border-radius: 0 5px 5px 0; /* Round the right corners */
+  border-radius: 0;/* Round the right corners */
 }
 
 /* Responsive Adjustments */
@@ -3026,6 +3128,69 @@ html {
       color: orchid;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Slightly smaller text for title */
   }
+  /* Image Container */
+.image-container {
+  position: relative; /* Enables positioning for overlay text */
+  display: inline-block; /* Prevents the container from stretching */
+  width: 100%; /* Full-width image */
+  max-width: 600px; /* Optional: Restrict maximum width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Image Styling */
+.image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevents inline spacing issues */
+  filter: brightness(0.7); /* Darkens the image for better text visibility */
+   /* Optional: Rounded corners */
+}
+
+/* Overlay Title */
+.overlay-title {
+  position: absolute; /* Position relative to the container */
+  top: 10%; /* Adjust to place the title closer to the top */
+  left: 10%; /* Align closer to the left edge */
+  transform: translate(0, 0);
+  color: white; /* White text for contrast */
+  font-size: 45px; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  text-align: left;
+  font-style: italic;
+  /* Center-align text */
+  margin: 0; /* Remove default margin */
+  z-index: 2; /* Ensure text appears above the image */
+}
+
+/* Overlay Description */
+.overlay-description {
+  position: absolute; /* Position relative to the container */
+  top: 50%; /* Adjust to place the description below the title */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center exactly */
+  color: white; /* White text for contrast */
+  font-size: 16px; /* Adjust font size */
+  line-height: 1.6; /* Improve readability */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Add some spacing around the text */
+  background-color: rgba(0, 0, 0, 0.4); /* Optional: Semi-transparent background */
+  /* Optional: Rounded corners */
+  z-index: 2; /* Ensure text appears above the image */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .overlay-title {
+      font-size: 20px; /* Adjust font size for smaller screens */
+  }
+  .overlay-description {
+      font-size: 14px; /* Adjust description size */
+      line-height: 1.4; /* Adjust line spacing */
+  }
+}
+
+
+
 
  
 
@@ -3036,7 +3201,6 @@ html {
 
  
 
-   /* Prevent distortion */
 
 
 
