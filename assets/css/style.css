@@ -480,7 +480,8 @@ h6 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
   text-align: left; /* Ensure text aligns to the left */
   overflow: hidden; /* Prevent any overflowing elements */
-  display: block; /* Ensure it's treated as a block element */
+  display: block; 
+  margin-top:550px;/* Ensure it's treated as a block element */
 }
 
 /* Core Content Text Styling */
@@ -2903,11 +2904,13 @@ html {
   color: var(--theme-color);
 }
 .core-competencies-section {
-  position: relative;
-  position: relative;
-  margin: 20px 0; /* Adds spacing around the section */
-  padding: 0; /* Removes extra padding */
-  width: 100%; /
+  background-color: #f9f9f9; /* Light background for readability */
+  padding: 40px 20px; /* Padding for spacing */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+  max-width: 900px; /* Restrict maximum width */
+  margin: 40px auto; /* Center section horizontally */
+  text-align: left;
  
 }
 
@@ -2928,10 +2931,11 @@ html {
 .core-title {
   font-size: 35px; /* Font size for the title */
   font-weight: bold; /* Bold text */
-  color:white; /* Text color */
+  color:darkcyan; /* Text color */
   margin: 0; /* Removes default margins */
-  text-align: left; /* Aligns the text to the left */
+  text-align: center; /* Aligns the text to the left */
   font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  margin-bottom:30px;
   /* Modern font */
 }
 .core-content {
@@ -3053,6 +3057,9 @@ html {
   line-height: 1.8; /* Improves spacing between lines */
   color: #333; /* Neutral text color */
 }
+.text-wrapper {
+  margin-bottom: 20px; /* Reduce bottom margin to decrease gap */
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -3066,7 +3073,7 @@ html {
 }
 .text-wrapper {
   width: 100%; /* Match the image width */
-  margin-bottom: 160px; /* Add spacing above the text */
+  margin-bottom: 10px; /* Add spacing above the text */
   padding: 15px; /* Add padding for readability */
 }
 .below-image-text {
@@ -3129,28 +3136,57 @@ html {
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Slightly smaller text for title */
   }
   /* Image Container */
-.image-container {
-  position: relative; /* Enables positioning for overlay text */
-  display: inline-block; /* Prevents the container from stretching */
-  width: 100%; /* Full-width image */
-  max-width: 600px; /* Optional: Restrict maximum width */
+/* Flexbox Container for Side-by-Side Layout */
+.parent-container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start (left) */
+  align-items: flex-start; /* Align items to the top */
+  max-width: 100%; /* Full width */
+  padding: 0; /* Remove padding */
   margin: 0 auto; /* Center the container */
 }
 
+/* Core Content Section */
+.core-content-wrapper {
+  flex: 1; /* Allow this section to take available space */
+  max-width: 50%; /* Restrict width to 50% */
+  padding: 20px; /* Add padding inside */
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 8px; /* Rounded corners */
+  margin-left: 0; /* Remove left margin to align to the left */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  top:80px;
+  margin-top: 60px;/* Optional shadow */
+}
+
+
+/* Image Container Section */
+.image-container {
+    flex: 0 0 auto; /* Allow this section to take available space */
+    /* Restrict width to 50% */
+    position: relative;
+    margin-left: auto; /* Push the image container to the right */
+    display: inline-block;
+    margin-top:-100px;
+
+  /* Enables text overlay */
+}
+
 /* Image Styling */
-.image {
-  width: 100%; /* Make the image responsive */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Prevents inline spacing issues */
-  filter: brightness(0.7); /* Darkens the image for better text visibility */
-   /* Optional: Rounded corners */
+.image-container img {
+    width: 120%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+    filter: brightness(0.7); /* Optional: Darken image */
+    border-radius: 8px; 
+   ;/* Optional: Rounded corners */
 }
 
 /* Overlay Title */
 .overlay-title {
   position: absolute; /* Position relative to the container */
   top: 10%; /* Adjust to place the title closer to the top */
-  left: 10%; /* Align closer to the left edge */
+  left: 15%; /* Align closer to the left edge */
   transform: translate(0, 0);
   color: white; /* White text for contrast */
   font-size: 45px; /* Adjust font size */
@@ -3162,32 +3198,330 @@ html {
   z-index: 2; /* Ensure text appears above the image */
 }
 
+
 /* Overlay Description */
 .overlay-description {
-  position: absolute; /* Position relative to the container */
-  top: 50%; /* Adjust to place the description below the title */
+  position: absolute; /* Place the description over the image */
+  top: 50%; /* Adjust placement below the title */
   left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Center exactly */
+  transform: translate(-50%, -50%); /* Center the text */
   color: white; /* White text for contrast */
-  font-size: 16px; /* Adjust font size */
-  line-height: 1.6; /* Improve readability */
-  text-align: center; /* Center-align text */
-  padding: 10px; /* Add some spacing around the text */
-  background-color: rgba(0, 0, 0, 0.4); /* Optional: Semi-transparent background */
+  font-size: 20px; /* Slightly smaller font size */
+  line-height: 1.4; /* Adjust line height for compactness */
+  text-align: left; /* Center-align text */
+  padding: 5px; /* Add padding around the text */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  z-index: 2; /* Ensure the text appears above the image */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Change font family */
+  max-width: 90%; /* Optional: Restrict description width for better layout */
+  white-space: normal;
+   /* Ensure proper word wrapping */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .core-and-image-container {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 20px; /* Add space between stacked sections */
+    }
+
+    .core-content-wrapper,
+    .image-container {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .overlay-title {
+        font-size: 20px; /* Adjust title size for smaller screens */
+    }
+
+    .overlay-description {
+        font-size: 14px; /* Adjust description size */
+    }
+}
+
+.heading-container {
+  text-align: center; /* Centers the heading */
+  margin: 160px 0 90px;
+  /* Add spacing above and below the heading */
+}
+
+.centered-heading {
+  font-size: 45px; /* Font size for the heading */
+  font-weight:400; /* Makes the text bold */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase; /* Ensures text is all uppercase */
+  color: #000; /* Black text color */
+  letter-spacing: 2px; /* Adds spacing between letters */
+  margin: 20px 0 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
+.highlighted-text {
+  font-size: 70px; /* Increase font size for MEXPO? */
+  color: #000; /* Keep text color black */
+  font-weight: 400; /* Ensure it's bold */
+}
+/* Section Wrapper */
+.why-choose-section {
+  background-image: url('../img/about/Untitled-2.png'); /* Your background image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+ /* Adjust padding to fit content properly */
+  /* Centers content horizontally */
+
+  /* Fallback color in case the image doesn't load */
+}
+
+/* Background Image */
+/* Section Styling */
+.vision-section {
+  /* Light background color */
+  padding: 40px 20px; /* Padding for spacing */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center align text */
+  flex-direction: column; /* Stack elements vertically */
   /* Optional: Rounded corners */
-  z-index: 2; /* Ensure text appears above the image */
+ /* Optional: Subtle shadow */
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 900px; /* Restrict the width of the content */
+  margin: 40px auto; /* Center the section horizontally */
+}
+
+/* Title Styling */
+.vision-title {
+  font-size: 40px; /* Larger font size for the title */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  margin-bottom: 20px; /* Add space below the title */
+  color: #333; /* Dark text color */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/* Font family */
+}
+
+/* Description Styling */
+.vision-description {
+  font-size: 20px; /* Font size for the description */
+  line-height: 1.9; /* Improve readability */
+  color: #555; /* Slightly lighter text color */
+  font-family: Arial, sans-serif; /* Font family */
+  margin: 0; 
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;/* Remove default margin */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vision-title {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+  .vision-section {
+    margin-top: 10px; /* Reduce top margin on smaller screens */
+    padding: 15px; /* Adjust padding for smaller devices */
+  }
+
+  .vision-description {
+    font-size: 16px; /* Adjust description font size */
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Content Box Wrapper */
+.content-box {
+    max-width: 90%; /* Adjust the maximum width */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between boxes */
+    position: relative; /* Adds  /* Space between boxes */
+}
+
+/* Individual Text Boxes */
+.text-box {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    color: white;
+
+    border: 3px solid white; /* Thicker border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    line-height: 1.6;
+    position: relative;
+  
+}
+
+.text-box.odd-box:first-of-type {
+  margin-top: 170px; /* Push the first box into the background image */
+  margin-right: auto; /* Align to the left */
+  width: 60%; /* Set consistent width */
+}
+
+/* Other odd boxes */
+.text-box.odd-box:not(:first-of-type) {
+  margin-top: 20px; /* Reduced gap for other odd boxes */
+  margin-right: auto; /* Align to the left */
+  width: 60%;
+}
+
+/* Even boxes */
+.text-box.even-box {
+  margin-top: 20px; /* Consistent spacing for even boxes */
+  margin-left: auto; /* Align to the right */
+  width: 60%; /* Set consistent width */
+}
+
+/* Add a bottom margin for all text boxes */
+.text-box {
+  margin-bottom: 20px; /* Maintain uniform spacing below each box */
+}
+/* Add consistent spacing for all boxes */
+
+
+/* Box Titles */
+.box-title {
+  font-size: 30px;
+  font-weight: 400;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+  margin-bottom: 10px; /* Space below title */
+  text-transform: uppercase;
+  color:white; /* Make title uppercase */
+}
+
+/* Box Descriptions */
+.box-description {
+  font-size: 16px;
+  color:white;
+   /* Improve readability */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .overlay-title {
-      font-size: 20px; /* Adjust font size for smaller screens */
+  .text-box {
+    width: 100%; /* Full width for smaller screens */
+    margin: 0;
+}
+
+.box-title {
+    font-size: 20px;
+}
+
+.box-description {
+    font-size: 14px;
+}
+}
+
+
+/* About Section Styling */
+.about1-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: left;
+  margin: 0;
+  margin-top: 0;
+}
+
+/* Content Wrapper with Flexbox */
+.content-wrapper {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: space-between; /* Add space between text and image */
+  gap: 20px; /* Space between content and image */
+  flex-wrap: wrap;
+  /* Wrap content on smaller devices */
+}
+
+/* About Content Styling */
+.container1 {
+  flex: 1;
+   /* Allow content to take available space */
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+}
+
+.underline {
+  width: 190px;
+  height: 4px;
+  background-color: green;
+  margin: 10px 0 20px;
+}
+
+.about-content {
+  margin-top: 50px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* About Image Styling */
+.about-image {
+  flex: 0 0 40%; /* Fix image width to 40% of the container */
+  max-width: 500px; /* Restrict maximum width */
+}
+
+.about-image img {
+  width: 100%; /* Ensure the image is fully responsive */
+  height: auto; /* Maintain aspect ratio */
+   /* Optional: Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a shadow for style */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Stack content and image vertically */
+    gap: 30px; /* Increase gap for smaller screens */
   }
-  .overlay-description {
-      font-size: 14px; /* Adjust description size */
-      line-height: 1.4; /* Adjust line spacing */
+
+  .about-image {
+    max-width: 100%; /* Allow image to span full width */
+  }
+
+  .section-title {
+    font-size: 24px; /* Adjust title size for smaller screens */
+  }
+
+  .about-content p {
+    font-size: 14px; /* Adjust font size */
+  }
+  .underline {
+    width: 120px;
+
   }
 }
+
+
+
+
+
+
+
+
 
 
 
